@@ -1,0 +1,65 @@
+
+import styles from './Header.module.css';
+import { RiSearchLine } from "react-icons/ri";
+import { Button } from '@mui/material';
+
+const menu = [
+    {
+        name: 'Каталог',
+        link: '/catalog'
+    },
+    {
+        name: 'Контакты',
+        link: '/contacts'
+    },
+    {
+        name: 'О компании',
+        link: '/about-company'
+    },
+    {
+        name: 'Блог',
+        link: '/blog'
+    },
+    {
+        name: 'Новости',
+        link: '/news'
+    }
+]
+
+const Header = () => {
+    return (
+        <header className={styles.header}>
+            <div className={styles.header__top}>
+                <div className={styles.header__logo}>
+                    <img src="./logo.png" alt="" />
+                    <div>
+                        <h2>TYNDYK TREVEL</h2>
+                        <p>Кыялыныздагы эс алуу</p>
+                    </div>
+                </div>
+                <div className={styles.header__nav}>
+                    {menu.map(item => <a key={item.name} href={item.link}>{item.name}</a>)}
+                </div>
+                <div className={styles.header__search}>
+                    <input type="text" placeholder="Поиск" />
+                    <span><RiSearchLine size={20} /></span>
+
+                </div>
+                <div className={styles.header__order__call}>
+                    <Button sx={{
+                        borderRadius: '40px',
+                        backgroundColor: '#2D9CDB',
+                        color: '#F2F2F2',
+                    }} size='large' variant="contained" >Обратный звонок</Button>
+                </div>
+                <div className={styles.header__info}>
+                    <a href="tel:+996755099069" className={styles.phone} >+996 755 099 069</a>
+                    <span className={styles.work_time}>9:00 - 19:00 ежедневно</span>
+                </div>
+
+            </div>
+        </header>
+    )
+}
+
+export default Header
