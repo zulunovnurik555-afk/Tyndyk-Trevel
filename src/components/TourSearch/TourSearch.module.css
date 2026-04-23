@@ -1,0 +1,110 @@
+.searchContainer {
+    background-color: #f2f2f2;
+    /* Светло-серый фон как на скрине */
+    padding: 30px 40px;
+    border-radius: 10px;
+    margin: 20px;
+    font-family: sans-serif;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 25px;
+    margin-top: 0;
+}
+
+.filterWrapper {
+    display: flex;
+    align-items: flex-end;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.fieldGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fieldGroup label {
+    font-size: 14px;
+    color: #444;
+    font-weight: 500;
+}
+
+/* Обертка для селекта, чтобы сделать кастомную стрелочку */
+.selectWrapper {
+    position: relative;
+    background: white;
+    border-radius: 25px;
+    /* Скругленные углы */
+    min-width: 160px;
+}
+
+.doubleFields {
+    display: flex;
+    gap: 10px;
+}
+
+.doubleFields .selectWrapper {
+    min-width: 100px;
+}
+
+.selectWrapper select {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    appearance: none;
+    /* Убираем дефолтную стрелку браузера */
+    font-size: 15px;
+    color: #333;
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+}
+
+/* Рисуем галочку (шеврон) через background-image или псевдоэлемент */
+.selectWrapper::after {
+    content: "";
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 6px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%3C333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+.searchBtn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 45px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.searchBtn:hover {
+    background-color: #2980b9;
+}
+
+/* Адаптивность для узких экранов */
+@media (max-width: 768px) {
+    .filterWrapper {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .selectWrapper {
+        width: 100%;
+    }
+}
