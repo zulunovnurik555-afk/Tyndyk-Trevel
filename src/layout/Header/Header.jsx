@@ -14,7 +14,7 @@ const menu = [
         link: '/contacts'
     },
     {
-        name: 'О компании',
+        name: 'Компании',
         link: '/about-company'
     },
     {

@@ -6,6 +6,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
 
+
 // Твои данные из mockApi
 const sideCardsData = [
     {
@@ -14,7 +15,7 @@ const sideCardsData = [
         description: 'Древний ключевой пункт Великого Шелкового Пути недалеко от границы с Китаем.'
     },
     {
-        image: 'https://central-asia.live/_next/image?url=https%3A%2F%2Fcentral-asia.live%2Fuploads%2Fburana-tower.jpg&w=3840&q=75',
+        image: 'https://open.kg/uploads/posts/2017-09/1505750299_g4.webp',
         title: 'Башня Бурана',
         description: 'Минарет 11-го века, хранящий тайны древнего города Баласагун.'
     }

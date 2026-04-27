@@ -5,7 +5,7 @@ import styles from './ToursGrid.module.css';
 const regionsTours = [
     {
         id: 1,
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7Jp3yjAWNkDtKxPNY0I1JJKJS3kwXvtVNUQ&s',
+        image: 'https://open.kg/uploads/posts/2017-09/1505750299_g4.webp',
         badge: 'ХИТ',
         badgeType: 'hit',
         title: 'Чуйская область: Наследие Баласагуна',
